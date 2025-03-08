@@ -8,7 +8,12 @@
 # }
 
 
-GET http://localhost:3000/trending-blogs
+POST http://localhost:3000/search-blogs
+Content-Type: application/json
+
+{
+    "tag": "travel"
+}
 
 # Content-Type: application/json
 # Authorization: Bearer eyJhbGci0iJIUzI1NiIsInR5cCI6Ikp)
