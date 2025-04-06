@@ -13,9 +13,15 @@ import { UserContext } from "../App";
 
 const BlogEditor = () => {
 
-    let { blog, blog: { title, banner, content, tags, des }, setBlog, textEditor, setTextEditor, setEditorState } = useContext(EditorContext)
+    // let { blog, blog: { title, banner, content, tags, des }, setBlog, textEditor, setTextEditor, setEditorState } = useContext(EditorContext)
 
-    let { userAuth: { access_token }} = useContext(UserContext)
+    // let { userAuth: { access_token }} = useContext(UserContext)
+
+    let context = useContext(EditorContext);
+    let blog = context?.blog || {};
+    let { title = "", banner = "", content = {}, tags = [], des = "" } = blog;
+    let { setBlog, textEditor, setTextEditor, setEditorState } = context;
+
 
     let navigate = useNavigate();
 

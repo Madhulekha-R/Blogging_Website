@@ -27,10 +27,8 @@ const HomePage = () => {
         state: blogs,
         data: data.blogs,
         page,
-        countRoute: "/search-blogs-count"
+        countRoute: "/all-latest-blogs-count"
       })
-
-      console.log(formatedData);
       setBlog(formatedData);
     })
     .catch(err => {
@@ -46,10 +44,9 @@ const HomePage = () => {
         state: blogs,
         data: data.blogs,
         page,
-        countRoute: "/all-latest-blogs-count",
+        countRoute: "/search-blogs-countt",
         data_to_send: { tag: pageState }
       })
-
       setBlog(formatedData);
     })
     .catch(err => {
@@ -135,9 +132,11 @@ const HomePage = () => {
               ) : (
                 trendingBlogs.length ?
                   trendingBlogs.map((blog, i) => {
-                    return <AnimationWrapper transition={{ duration: 1, delay: i*.1 }} key={i}>
-                      <MinimalBlogPost blog={blog} index={i} />
-                    </AnimationWrapper>
+                    return (
+                      <AnimationWrapper transition={{ duration: 1, delay: i*.1 }} key={i}>
+                        <MinimalBlogPost blog={blog} index={i} />
+                      </AnimationWrapper>
+                    );
                   })
                 : <NoDataMessage message="No Trending Blogs" />
             )}
