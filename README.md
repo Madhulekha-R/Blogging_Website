@@ -4,12 +4,6 @@
 
 Leveraging **AWS Cloud** for hosting and **MongoDB** for scalable storage, Searcio ensures that users get a seamless experience with **real-time interactions, intuitive search, and a feature-rich comment system.**
 
-## TABLE OF CONTENTS
-- [Key Features](#key-features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Contact](#contact)
-
 ## KEY FEATURES:
 **1.Blog Page & Interactions**
 - **Dynamic Blog Page Route** – Fetch and render blog details dynamically.
